@@ -32,7 +32,6 @@ const VideoComponent = () => {
               <Image
                 src={VideoComponentData?.playButton}
                 alt=""
-                className=""
                 width={100}
                 height={100}
               />
