@@ -13,7 +13,7 @@ const MainHeader = () => {
   };
 
   return (
-    <div className="bg-white py-4 px-2 sticky top-0 z-10 ">
+    <div className="bg-white py-3 px-2 sticky top-0 z-10 ">
       <div className="container mx-auto">
         <div className="flex justify-around items-center">
           <div className="">
