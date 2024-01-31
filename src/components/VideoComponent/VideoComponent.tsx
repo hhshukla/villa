@@ -32,8 +32,9 @@ const VideoComponent = () => {
               <Image
                 src={VideoComponentData?.playButton}
                 alt=""
-                width={100}
-                height={100}
+                width={80}
+                height={80}
+                className=" bg-orange-500 bg-opacity-60 rounded-full"
               />
             </a>
           </div>

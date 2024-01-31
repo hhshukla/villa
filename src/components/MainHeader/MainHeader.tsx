@@ -1,18 +1,11 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { MainHeaderData } from "./MainHeader.mock";
+import { FaCalendarAlt } from "react-icons/fa";
+import { HiBars3 } from "react-icons/hi2";
 
-interface MainHeaderProps {
-  logoImage: string;
-  toggleIcon: string;
-  menuItems: { label: string; path: string }[];
-}
-
-const MainHeader: React.FC<MainHeaderProps> = ({
-  menuItems,
-  logoImage,
-  toggleIcon,
-}) => {
+const MainHeader = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -20,12 +13,12 @@ const MainHeader: React.FC<MainHeaderProps> = ({
   };
 
   return (
-    <div className="bg-white py-4 px-2">
+    <div className="bg-white py-4 px-2 sticky top-0 z-10 ">
       <div className="container mx-auto">
         <div className="flex justify-around items-center">
           <div className="">
             <Image
-              src={logoImage}
+              src={MainHeaderData?.logoImage}
               alt="logo"
               className=""
               width={50}
@@ -37,18 +30,14 @@ const MainHeader: React.FC<MainHeaderProps> = ({
               className="block text-orange-600 text-xl px-3 py-1 focus:outline-none bg-white rounded-[3px] "
               onClick={toggleMenu}
             >
-              <Image
-                src={toggleIcon}
-                alt="toggle navbar"
-                className="w-10"
-                width={10}
-                height={10}
-              />
+              <div className="text-4xl font-bold">
+                <HiBars3 />
+              </div>
             </button>
           </div>
           <div className="hidden lg:block">
-            <ul className="flex">
-              {menuItems?.map((item, index) => (
+            <ul className="flex items-center">
+              {MainHeaderData?.menuItems?.map((item, index) => (
                 <li key={index}>
                   <Link
                     href={item.path}
@@ -58,13 +47,19 @@ const MainHeader: React.FC<MainHeaderProps> = ({
                   </Link>
                 </li>
               ))}
+              <div className=" text-white bg-black rounded-full text-center m-5 cursor-pointer flex justify-center items-center">
+                <div className="p-4 bg-orange-500 rounded-full text-center">
+                  <FaCalendarAlt />
+                </div>
+                <h6 className="mx-2">{MainHeaderData?.link}</h6>
+              </div>
             </ul>
           </div>
         </div>
         {isMenuOpen && (
           <div className="lg:hidden">
             <ul className="mt-2 text-center">
-              {menuItems?.map((item, index) => (
+              {MainHeaderData?.menuItems?.map((item, index) => (
                 <li
                   className="text-black py-2 px-4 transition duration-1000 hover:text-primary1 cursor-pointer"
                   key={index}
