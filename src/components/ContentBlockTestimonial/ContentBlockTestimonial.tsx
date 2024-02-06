@@ -31,7 +31,7 @@ const ContentBlockTestimonial = () => {
               >
                 <Image
                   src={listData?.icon}
-                  alt=""
+                  alt="icons"
                   className=""
                   width={50}
                   height={50}

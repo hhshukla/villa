@@ -40,7 +40,7 @@ const TabFilter = () => {
             ))}
           </div>
         </div>
-        <div className="">
+        <div>
           {TabFilterData?.TabsData?.map((tabData, tabIndex) => (
             <div
               key={tabIndex}
