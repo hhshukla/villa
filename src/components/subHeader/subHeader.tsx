@@ -34,16 +34,16 @@ const SubHeader = () => {
           </div>
 
           <div className="p-2 text-3xl text-orange-500 flex justify-center items-center">
-            <div className="p-2 bg-gray-500 rounded-full mx-2">
+            <div className="p-2 bg-gray-500 rounded-full mx-2 cursor-pointer">
               <CiFacebook />
             </div>
-            <div className="p-2 bg-gray-500 rounded-full mx-2">
+            <div className="p-2 bg-gray-500 rounded-full mx-2 cursor-pointer">
               <CiTwitter />
             </div>
-            <div className="p-2 bg-gray-500 rounded-full mx-2">
+            <div className="p-2 bg-gray-500 rounded-full mx-2 cursor-pointer">
               <CiInstagram />
             </div>
-            <div className="p-2 bg-gray-500 rounded-full mx-2">
+            <div className="p-2 bg-gray-500 rounded-full mx-2 cursor-pointer">
               <CiLinkedin />
             </div>
           </div>

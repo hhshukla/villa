@@ -69,8 +69,8 @@ const TabFilter = () => {
                   src={tabData?.img}
                   alt=""
                   className="w-full"
-                  width={100}
-                  height={100}
+                  width={300}
+                  height={300}
                 />
               </div>
               <div className="mb-5">
